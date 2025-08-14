@@ -8,11 +8,11 @@ The official Python SDK for the [Tessa Browser Agent API](https://heytessa.ai) -
 ## 🚀 Quick Start
 
 ```bash
-pip install tessa-sdk
+pip install tessa_sdk
 ```
 
 ```python
-from tessa import BrowserAgent
+from tessa_sdk import BrowserAgent
 
 # One-line browser automation
 result = BrowserAgent("YOUR_API_KEY").run("Go to news.ycombinator.com and get the top 5 stories")
@@ -47,7 +47,7 @@ agent = BrowserAgent()  # Uses env var
 ### Simple Usage
 
 ```python
-from tessa import BrowserAgent
+from tessa_sdk import BrowserAgent
 
 agent = BrowserAgent("YOUR_API_KEY")
 
@@ -73,7 +73,7 @@ result = agent.fill_form(
 ### Synchronous Client
 
 ```python
-from tessa import TessaClient, BrowserConfig
+from tessa_sdk import TessaClient, BrowserConfig
 
 # Using context manager for automatic cleanup
 with TessaClient(api_key="YOUR_API_KEY") as client:
@@ -111,7 +111,7 @@ client.close()
 
 ```python
 import asyncio
-from tessa import AsyncTessaClient
+from tessa_sdk import AsyncTessaClient
 
 async def run_multiple():
     async with AsyncTessaClient(api_key="YOUR_API_KEY") as client:
@@ -172,7 +172,7 @@ result = job.wait_for_completion()
 ### Models
 
 ```python
-from tessa import BrowserConfig, ActionSelectionModel
+from tessa_sdk import BrowserConfig, ActionSelectionModel
 
 config = BrowserConfig(
     width=1920,              # 320-4096
@@ -191,7 +191,7 @@ ActionSelectionModel.GEMINI_FLASH
 ## 🛡️ Error Handling
 
 ```python
-from tessa.exceptions import *
+from tessa_sdk.exceptions import *
 
 try:
     result = agent.run("Extract data")
@@ -256,7 +256,7 @@ print(f"Credits used: {result.credits_used}")
 
 - **Docs**: [docs.heytessa.ai](https://docs.heytessa.ai)
 - **Email**: [support@generalagency.ai](mailto:support@generalagency.ai)
-- **Issues**: [GitHub Issues](https://github.com/GeneralAgencyAI/tessa-sdk/issues)
+- **Issues**: [GitHub Issues](https://github.com/GeneralAgencyAI/tessa_sdk/issues)
 
 ## 📄 License
 

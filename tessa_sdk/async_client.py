@@ -142,7 +142,7 @@ class AsyncTessaClient:
             headers={
                 "Authorization": f"Bearer {self.api_key}",
                 "Content-Type": "application/json",
-                "User-Agent": "tessa-sdk-python/0.1.0"
+                "User-Agent": "tessa_sdk-python/0.1.0"
             },
             timeout=httpx.Timeout(timeout),
         )

@@ -6,8 +6,8 @@ different AI models, and complex automation scenarios.
 """
 
 import os
-from tessa import TessaClient, BrowserConfig, ActionSelectionModel
-from tessa.exceptions import JobFailedError, TimeoutError
+from tessa_sdk import TessaClient, BrowserConfig, ActionSelectionModel
+from tessa_sdk.exceptions import JobFailedError, TimeoutError
 
 # Set your API key
 API_KEY = "YOUR_API_KEY"  # Replace with your actual API key
@@ -108,7 +108,7 @@ def complex_workflow():
     print("🔄 Complex Multi-Step Workflow")
     print("-" * 50)
     
-    from tessa import BrowserAgent
+    from tessa_sdk import BrowserAgent
     
     agent = BrowserAgent(
         api_key=API_KEY,
@@ -281,7 +281,7 @@ def mobile_viewport_example():
     print("📱 Mobile Viewport Example")
     print("-" * 50)
     
-    from tessa import BrowserAgent
+    from tessa_sdk import BrowserAgent
     
     # Create agent with mobile viewport
     mobile_agent = BrowserAgent(
@@ -314,8 +314,8 @@ def error_handling_example():
     print("⚠️ Error Handling Example")
     print("-" * 50)
     
-    from tessa import BrowserAgent
-    from tessa.exceptions import (
+    from tessa_sdk import BrowserAgent
+    from tessa_sdk.exceptions import (
         AuthenticationError,
         RateLimitError,
         JobFailedError,

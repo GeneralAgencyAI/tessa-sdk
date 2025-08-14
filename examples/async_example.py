@@ -7,7 +7,7 @@ This example demonstrates how to use the async client for concurrent operations.
 import asyncio
 import os
 from typing import List
-from tessa import AsyncTessaClient, JobResult
+from tessa_sdk import AsyncTessaClient, JobResult
 
 # Set your API key
 API_KEY = "YOUR_API_KEY"  # Replace with your actual API key

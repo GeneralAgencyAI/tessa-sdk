@@ -7,7 +7,7 @@ This example demonstrates various web scraping scenarios.
 import os
 import json
 from datetime import datetime
-from tessa import TessaClient, BrowserConfig
+from tessa_sdk import TessaClient, BrowserConfig
 
 # Set your API key
 API_KEY = "YOUR_API_KEY"  # Replace with your actual API key
@@ -123,7 +123,7 @@ def scrape_social_media_stats():
     print("📱 Social Media Stats Scraping")
     print("-" * 50)
     
-    from tessa import BrowserAgent
+    from tessa_sdk import BrowserAgent
     
     agent = BrowserAgent(
         api_key=API_KEY,
@@ -165,7 +165,7 @@ def scrape_job_listings():
     print("💼 Job Listings Scraping")
     print("-" * 50)
     
-    from tessa import BrowserAgent
+    from tessa_sdk import BrowserAgent
     
     agent = BrowserAgent(api_key=API_KEY)
     

@@ -8,8 +8,8 @@ for browser automation tasks.
 import os
 import json
 from datetime import datetime
-from tessa import TessaClient, BrowserConfig, JobStatus, ActionSelectionModel
-from tessa.exceptions import JobFailedError, TimeoutError, AuthenticationError
+from tessa_sdk import TessaClient, BrowserConfig, JobStatus, ActionSelectionModel
+from tessa_sdk.exceptions import JobFailedError, TimeoutError, AuthenticationError
 
 # Set your API key
 API_KEY = "YOUR_API_KEY"  # Replace with your actual API key

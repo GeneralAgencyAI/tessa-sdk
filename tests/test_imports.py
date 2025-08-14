@@ -5,9 +5,9 @@ import pytest
 
 def test_main_imports():
     """Test that main classes can be imported."""
-    from tessa import BrowserAgent, TessaClient, AsyncTessaClient
-    from tessa import BrowserConfig, JobStatus, JobResult, ActionSelectionModel
-    from tessa import TessaError, AuthenticationError, RateLimitError
+    from tessa_sdk import BrowserAgent, TessaClient, AsyncTessaClient
+    from tessa_sdk import BrowserConfig, JobStatus, JobResult, ActionSelectionModel
+    from tessa_sdk import TessaError, AuthenticationError, RateLimitError
     
     # Verify classes exist
     assert BrowserAgent is not None
@@ -18,7 +18,7 @@ def test_main_imports():
 
 def test_model_enums():
     """Test that model enums work correctly."""
-    from tessa import ActionSelectionModel
+    from tessa_sdk import ActionSelectionModel
     
     assert ActionSelectionModel.CLAUDE_SONNET.value == "claude-sonnet-4-20250514"
     assert ActionSelectionModel.GPT_4O.value == "gpt-4o"
@@ -30,7 +30,7 @@ def test_model_enums():
 
 def test_browser_config():
     """Test BrowserConfig model."""
-    from tessa import BrowserConfig
+    from tessa_sdk import BrowserConfig
     
     config = BrowserConfig()
     assert config.width == 1920
@@ -52,7 +52,7 @@ def test_browser_config():
 
 def test_exceptions():
     """Test custom exceptions."""
-    from tessa.exceptions import (
+    from tessa_sdk.exceptions import (
         TessaError,
         AuthenticationError,
         JobFailedError,

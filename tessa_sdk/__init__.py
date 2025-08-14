@@ -2,11 +2,11 @@
 Tessa SDK - Python SDK for the Tessa Browser Agent & Workflows API
 
 Simple one-line usage:
-    >>> from tessa import BrowserAgent
+    >>> from tessa_sdk import BrowserAgent
     >>> result = BrowserAgent("YOUR_API_KEY").run("Go to example.com and extract the title")
 
 Advanced usage:
-    >>> from tessa import TessaClient
+    >>> from tessa_sdk import TessaClient
     >>> client = TessaClient(api_key="YOUR_API_KEY")
     >>> job = client.run_browser_agent(directive="...", browser_config={...})
     >>> result = job.wait_for_completion()

@@ -5,7 +5,7 @@ This example demonstrates the simplest way to use the SDK with one line of code.
 """
 
 import os
-from tessa import BrowserAgent
+from tessa_sdk import BrowserAgent
 
 # Set your API key (or use environment variable TESSA_API_KEY)
 API_KEY = "YOUR_API_KEY"  # Replace with your actual API key

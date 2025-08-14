@@ -1,4 +1,4 @@
-"""Setup script for tessa-sdk package."""
+"""Setup script for tessa_sdk package."""
 
 from setuptools import setup, find_packages
 
@@ -7,15 +7,15 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setup(
-    name="tessa-sdk",
+    name="tessa_sdk",
     version="0.1.0",
     author="Tessa Team",
     author_email="support@generalagency.ai",
     description="Python SDK for the Tessa Browser Agent & Workflows API",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/GeneralAgencyAI/tessa-sdk",
-    packages=find_packages(),
+    url="https://github.com/GeneralAgencyAI/tessa_sdk",
+    packages=find_packages(include=["tessa_sdk*"]),
     classifiers=[
         "Development Status :: 4 - Beta",
         "Intended Audience :: Developers",
@@ -52,7 +52,7 @@ setup(
     project_urls={
         "Homepage": "https://heytessa.ai",
         "Documentation": "https://docs.heytessa.ai",
-        "Repository": "https://github.com/GeneralAgencyAI/tessa-sdk",
-        "Issues": "https://github.com/GeneralAgencyAI/tessa-sdk/issues",
+        "Repository": "https://github.com/GeneralAgencyAI/tessa_sdk",
+        "Issues": "https://github.com/GeneralAgencyAI/tessa_sdk/issues",
     },
 )

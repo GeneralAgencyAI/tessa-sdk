@@ -7,7 +7,7 @@ import time
 
 def test_sync_client_initialization():
     """Test that TessaClient can be initialized."""
-    from tessa import TessaClient
+    from tessa_sdk import TessaClient
     
     client = TessaClient(api_key="test_key")
     assert client._api_key == "test_key"
@@ -18,7 +18,7 @@ def test_sync_client_initialization():
 
 def test_sync_client_context_manager():
     """Test that TessaClient works as a context manager."""
-    from tessa import TessaClient
+    from tessa_sdk import TessaClient
     
     with TessaClient(api_key="test_key") as client:
         assert client is not None
@@ -28,8 +28,8 @@ def test_sync_client_context_manager():
 
 def test_job_class():
     """Test the Job class functionality."""
-    from tessa.sync_client import Job
-    from tessa import JobStatusEnum, JobStatus
+    from tessa_sdk.sync_client import Job
+    from tessa_sdk import JobStatusEnum, JobStatus
     
     # Create a mock client
     mock_client = Mock()
@@ -65,8 +65,8 @@ def test_job_class():
 
 def test_job_wait_for_completion():
     """Test job wait_for_completion method."""
-    from tessa.sync_client import Job
-    from tessa import JobStatusEnum, JobStatus, JobResult
+    from tessa_sdk.sync_client import Job
+    from tessa_sdk import JobStatusEnum, JobStatus, JobResult
     
     mock_client = Mock()
     
@@ -105,9 +105,9 @@ def test_job_wait_for_completion():
 
 def test_job_wait_for_completion_timeout():
     """Test job timeout handling."""
-    from tessa.sync_client import Job
-    from tessa import JobStatusEnum, JobStatus
-    from tessa.exceptions import TimeoutError
+    from tessa_sdk.sync_client import Job
+    from tessa_sdk import JobStatusEnum, JobStatus
+    from tessa_sdk.exceptions import TimeoutError
     
     mock_client = Mock()
     
@@ -134,9 +134,9 @@ def test_job_wait_for_completion_timeout():
 
 def test_job_wait_for_completion_failed():
     """Test handling of failed jobs."""
-    from tessa.sync_client import Job
-    from tessa import JobStatusEnum, JobStatus
-    from tessa.exceptions import JobFailedError
+    from tessa_sdk.sync_client import Job
+    from tessa_sdk import JobStatusEnum, JobStatus
+    from tessa_sdk.exceptions import JobFailedError
     
     mock_client = Mock()
     
@@ -162,7 +162,7 @@ def test_job_wait_for_completion_failed():
 
 def test_browser_config():
     """Test BrowserConfig model."""
-    from tessa import BrowserConfig
+    from tessa_sdk import BrowserConfig
     
     # Default config
     config = BrowserConfig()
